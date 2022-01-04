@@ -10,10 +10,6 @@
                 <v-img src="" />
             </div>
         </v-parallax>
-        <v-container fluid id="features" class="mt-2"> </v-container>
-        <div class="svg-border-waves">
-            <img src="" />
-        </div>
     </section>
 </template>
 

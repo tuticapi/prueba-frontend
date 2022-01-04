@@ -1,9 +1,6 @@
 <template>
     <v-app>
         <navigation :color="color" :flat="flat" />
-        <v-main class="pt-0"> 
-            <home />
-        </v-main>
         <v-scale-transition>
             <v-btn
                 fab
@@ -19,20 +16,22 @@
                 <v-icon>mdi-arrow-up</v-icon>
             </v-btn>
         </v-scale-transition>
+        <v-main class="pt-0">
+            <router-view />
+        </v-main>
+
         <foote />
     </v-app>
 </template>
 
 <script>
 import navigation from "./components/Navigation";
-import home from "./components/HomeSection";
 import foote from "./components/Footer";
 
 export default {
     name: "App",
     components: {
         navigation,
-        home,
         foote,
     },
     data: () => ({
@@ -76,6 +75,7 @@ export default {
 
 <style scoped>
 .v-main {
+    background-image: url("~@/assets/img/bgMain.png");
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
