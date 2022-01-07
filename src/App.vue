@@ -39,27 +39,10 @@ export default {
         color: "",
         flat: null,
     }),
-
     created() {
-        const top = window.pageYOffset || 0;
-        if (top <= 60) {
-            this.color = "transparent";
-            this.flat = true;
-        }
+        this.color = "secondary";
+        this.flat = false;
     },
-
-    watch: {
-        fab(value) {
-            if (value) {
-                this.color = "secondary";
-                this.flat = false;
-            } else {
-                this.color = "transparent";
-                this.flat = true;
-            }
-        },
-    },
-
     methods: {
         onScroll(e) {
             if (typeof window === "undefined") return;

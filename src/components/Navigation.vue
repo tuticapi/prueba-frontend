@@ -17,7 +17,7 @@
                 </v-btn>
                 <v-btn
                     text
-                    @click="$router.replace('Paintings').catch(() => {})"
+                    @click="$router.replace('paintings').catch(() => {})"
                 >
                     <span class="mr-2">Gallery</span>
                 </v-btn>
