@@ -5,34 +5,26 @@
         </section>
         <section v-for="image in images" v-bind:key="image.id">
             <article>
-                <img
-                    v-bind:src="image.baseimageurl"
-                    @click.prevent="openImg(image.baseimageurl)"
-                />
+                <ImageComponent :baseimageurl="image.baseimageurl" />
             </article>
         </section>
         <section v-intersect="infiniteScrolling"></section>
-
-        <v-dialog v-model="dialog" width="450" class="dialog">
-            <v-img :src="activeImg" />
-            <span class="dialog-close" @click.prevent="closeImg"
-                ><v-icon>mdi-close</v-icon></span
-            >
-        </v-dialog>
     </div>
 </template>
 
 <script>
 import axios from "axios";
+import ImageComponent from "@/components/Image";
 
 export default {
-    name: "Images",
+    name: "Art",
+    components: {
+        ImageComponent,
+    },
     data() {
         return {
             images: [],
             page: 1,
-            activeImg: "",
-            dialog: false,
         };
     },
     methods: {
@@ -57,14 +49,6 @@ export default {
                         console.log(err);
                     });
             }, 500);
-        },
-        openImg(img) {
-            this.activeImg = img;
-            this.dialog = true;
-        },
-        closeImg() {
-            this.activeImg = "";
-            this.dialog = false;
         },
     },
     computed: {
