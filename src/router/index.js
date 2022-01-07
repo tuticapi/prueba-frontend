@@ -6,12 +6,12 @@ Vue.use(VueRouter);
 const routes = [
     {
         path: "/",
-        name: "Home",
+        name: "pome",
         component: () => import("../views/HomeSection.vue"),
     },
     {
-        path: "/Paintings",
-        name: "Paintings",
+        path: "/paintings/",
+        name: "paintings",
         component: () => import("../views/Art.vue"),
     },
 ];

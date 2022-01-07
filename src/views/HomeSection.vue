@@ -1,15 +1,19 @@
 <template>
     <section id="hero">
-        <v-parallax dark src="" height="750">
-            <v-row align="center" justify="center">
-                <v-col cols="10">
-                    <v-row align="center" justify="center"> </v-row>
-                </v-col>
-            </v-row>
-            <div class="svg-border-waves text-white">
-                <v-img src="" />
-            </div>
-        </v-parallax>
+        <div class="homepage">
+            <h2 class="title">
+                I have done this project to demonstrate skills in frontend
+                development.
+            </h2>
+            <h2 class="subtitle">
+                The technology used is Vue.js and, using the
+                <a href="https://github.com/harvardartmuseums/api-docs">
+                    Harvard Art Museum API</a
+                >, I was instructed to build and infinite scroll, that you can
+                see in
+                <a href="paintings">gallery section</a>
+            </h2>
+        </div>
     </section>
 </template>
 
@@ -23,6 +27,30 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
-
-<style></style>
+<style lang="scss" scoped>
+.homepage {
+    height: 50%;
+    .title {
+        padding-top: 125px;
+        padding-bottom: 20px;
+        font-size: 18px;
+        font-family: Nobile;
+        font-weight: 500;
+        color: rgb(3, 3, 3);
+        width: 50%;
+        margin: auto;
+        text-align: center;
+    }
+    .subtitle {
+        padding-top: 25px;
+        padding-bottom: 20px;
+        font-size: 18px;
+        font-family: Nobile;
+        font-weight: 500;
+        color: rgb(3, 3, 3);
+        width: 50%;
+        margin: auto;
+        text-align: center;
+    }
+}
+</style>

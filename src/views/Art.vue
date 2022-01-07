@@ -3,9 +3,6 @@
         <section v-if="!images.length" class="spinner">
             <div class="loader"></div>
         </section>
-        <section v-if="!images.length" class="spinner">
-            <div class="loader"></div>
-        </section>
         <section v-for="image in images" v-bind:key="image.id">
             <article>
                 <img
