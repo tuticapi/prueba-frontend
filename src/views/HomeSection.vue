@@ -13,6 +13,15 @@
                 see in
                 <a href="paintings">gallery section</a>
             </h2>
+            <div
+                class="imgp d-flex flex-column justify-space-between align-center"
+            >
+                <v-img
+                    :aspect-ratio="16 / 9"
+                    :width="width"
+                    src="@/assets/img/iceland.jpeg"
+                ></v-img>
+            </div>
         </div>
     </section>
 </template>
@@ -20,7 +29,9 @@
 <script>
 export default {
     data() {
-        return {};
+        return {
+            width: "450px",
+        };
     },
     watch: {},
     methods: {},
@@ -51,6 +62,9 @@ export default {
         width: 50%;
         margin: auto;
         text-align: center;
+    }
+    .imgp {
+        padding-bottom: 10px;
     }
 }
 </style>
